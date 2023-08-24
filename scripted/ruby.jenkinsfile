@@ -1,0 +1,9 @@
+#!/bib/groovy
+
+node {
+    stage('Build') {
+        docker.image('ruby:3.2.2-alpine3.18').inside {
+            sh 'ruby --version'
+        }
+    }
+}
