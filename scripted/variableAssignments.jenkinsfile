@@ -1,0 +1,8 @@
+def t = true
+def (x, y) = [5, "foo"]
+
+node {
+    if(t && x == 5) {
+        echo y
+    }
+}
