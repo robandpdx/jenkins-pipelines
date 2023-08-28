@@ -3,3 +3,15 @@ node {
         callEcho('hello',  'world')
     }
 }
+
+def callEcho(arg1, arg2) {
+    echo arg1
+    echo arg2
+    greetMe('Jon')
+}
+
+def greetMe(name = 'tester') {
+    if (name != '') {
+        echo name
+    }
+}
