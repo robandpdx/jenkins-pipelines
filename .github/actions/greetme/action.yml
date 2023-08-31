@@ -1,0 +1,13 @@
+name: greetMe
+inputs:
+  name:
+    required: true
+    default: tester
+    description: name = 'tester'
+runs:
+  using: composite
+  steps:
+  - name: echo message
+    run: echo ${{ inputs.name }}
+    if: "${{ inputs.name != '' }}"
+    shell: bash
