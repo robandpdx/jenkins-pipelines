@@ -1,0 +1,20 @@
+name: callEcho
+inputs:
+  arg1:
+    required: true
+    description: arg1
+  arg2:
+    required: true
+    description: arg2
+runs:
+  using: composite
+  steps:
+  - name: echo message
+    run: echo ${{ inputs.arg1 }}
+    shell: bash
+  - name: echo message
+    run: echo ${{ inputs.arg2 }}
+    shell: bash
+  - uses: "./.github/actions/greetme"
+    with:
+      name: Jon
